@@ -1,0 +1,4 @@
+C:\Users\2017122760013\Desktop\dev_c_cpp\CLion\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\2017122760013\CLionProjects\tpa-arvore
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/2017122760013/CLionProjects/tpa-arvore/cmake-build-debug
