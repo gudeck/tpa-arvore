@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/2017122760013/CLionProjects/tpa-arvore/src/arvore.c" "C:/Users/2017122760013/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
-  "C:/Users/2017122760013/CLionProjects/tpa-arvore/src/cliente.c" "C:/Users/2017122760013/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/cliente.c.obj"
-  "C:/Users/2017122760013/CLionProjects/tpa-arvore/src/main.c" "C:/Users/2017122760013/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/main.c.obj"
+  "C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
+  "C:/Users/guzuc/CLionProjects/tpa-arvore/src/cliente.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/cliente.c.obj"
+  "C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

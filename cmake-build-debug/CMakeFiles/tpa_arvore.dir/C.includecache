@@ -6,7 +6,23 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/2017122760013/CLionProjects/tpa-arvore/main.c
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 stdio.h
 -
+cliente.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+stdbool.h
+-
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c
+locale.h
+-
+stdio.h
+-
+headers/cliente.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+headers/arvore.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 

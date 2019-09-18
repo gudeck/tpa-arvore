@@ -5,15 +5,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include "headers/cliente.h"
+#include "headers/main.h"
 
-Cliente *criarCliente(int codigo, char *nome, double saldo) {
+Cliente *criarCliente(char *codigo, char *nome, char *saldo) {
 
     Cliente *novoCliente = (Cliente *) calloc(1, sizeof(Cliente));
     novoCliente->nome = (char *) calloc(strlen(nome) + 1, sizeof(char));
 
-    novoCliente->codigo = codigo;
+    novoCliente->codigo = strtol(codigo, NULL, 10);
     strcpy(novoCliente->nome, nome);
-    novoCliente->saldo = saldo;
+    novoCliente->saldo = strtod(removerCaractere(saldo, '.'), NULL);
     return novoCliente;
 }
 
@@ -27,11 +28,3 @@ ItemCliente *criarRegistro(Cliente *cliente) {
     return novoRegistro;
 }
 
-void excluirRegistro(ItemCliente *registro) {
-
-    if (registro->maior != NULL)
-        registro->maior->menor = registro->menor;
-    if (registro->menor != NULL)
-        registro->menor->maior = registro->maior;
-    free(registro);
-}

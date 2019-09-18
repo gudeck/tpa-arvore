@@ -19,10 +19,8 @@ typedef struct structItemCliente {
 } ItemCliente;
 
 
-Cliente *criarCliente(int codigo, char *nome, double saldo);
+Cliente *criarCliente(char *codigo, char *nome, char *saldo);
 
 ItemCliente *criarRegistro(Cliente *cliente);
-
-void excluirRegistro(ItemCliente *registro);
 
 #endif //TPA_HASH_CLIENTE_H

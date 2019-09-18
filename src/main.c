@@ -4,8 +4,63 @@
 
 #include <locale.h>
 #include <stdio.h>
-#include "headers/main.h"
-#include "headers/hashFechado.h"
+#include "headers/cliente.h"
+#include "headers/arvore.h"
+
+//=================================================
+void preOrdem(ItemCliente *raiz) {
+    if (raiz != NULL) {
+        printf("\t%d", raiz->cliente->codigo);
+        preOrdem(raiz->menor);
+        preOrdem(raiz->maior);
+    }//if
+}
+
+//================================================
+void emOrdem(ItemCliente *raiz) {
+    if (raiz != NULL) {
+        emOrdem(raiz->menor);
+        printf("\t%d", raiz->cliente->codigo);
+        emOrdem(raiz->maior);
+    }//if
+}
+
+//=================================================
+void posOrdem(ItemCliente *raiz) {
+    if (raiz != NULL) {
+        posOrdem(raiz->menor);
+        posOrdem(raiz->maior);
+        printf("\t%d", raiz->cliente->codigo);
+    }//if
+}
+
+int altura(ItemCliente *raiz) {
+    if (raiz == NULL)
+        return -1; // altura da árvore vazia
+    else {
+        int alturaEsquerda = altura(raiz->menor);
+        int alturaDireita = altura(raiz->maior);
+        if (alturaEsquerda < alturaDireita) return alturaDireita + 1;
+        else return alturaEsquerda + 1;
+    }
+}
+
+// A função auxiliar printnode imprime o caracter
+// c precedido de 3b espaços e seguido de uma mudança
+// de linha.
+void printnode(Cliente *cliente, int b) {
+    int i;
+    for (i = 0; i < b; i++) printf("   ");
+    printf("%d\n", cliente->codigo);
+}
+
+void show(ItemCliente *x, int b) {
+    if (x != NULL) {
+        printnode(x->cliente, b);
+        show(x->maior, b + 1);
+        show(x->menor, b + 1);
+    }
+}
 
 int main(int argc, char *argv[]) {
 
@@ -14,10 +69,16 @@ int main(int argc, char *argv[]) {
     FILE *arquivo = fopen("../DadosBancoPulini.txt", "r");
 
     if (arquivo != NULL) {
-        ArvoreClientes *hash = preencherHash(arquivo);
+        ArvoreClientes *arvore = preencherArvore(arquivo);
 
-        mostrarHash(hash);
+//        preOrdem(*(arvore->raiz));
+//        emOrdem(*(arvore->raiz));
+//        posOrdem(*(arvore->raiz));
 
+        printf("%d %d %d",
+               (*(arvore->raiz))->menor->cliente->codigo,
+               (*(arvore->raiz))->cliente->codigo,
+               (*(arvore->raiz))->maior->cliente->codigo);
         fclose(arquivo);
     }
     return 0;
@@ -34,28 +95,3 @@ char *removerCaractere(char *string, char caractere) {
     return string;
 }
 
-void gerarArquivoCSV(ArvoreClientes *hash) {
-    FILE *csv = fopen("../relatorioColisoes.csv", "w+");
-    fprintf(csv, "Posição;Número de Colisões\n");
-    for (int i = 0; i < hash->tamanho; ++i) {
-        if (hash->registro[i] && hash->registro[i]->colisoesPosicao > 0)
-            fprintf(csv, "%d;%d\n", i, hash->registro[i]->colisoesPosicao);
-    }
-    fprintf(csv, "\nTotal:;%d", hash->colisoesTotal);
-    fclose(csv);
-}
-
-void mostrarHash(ArvoreClientes *hash) {
-    ItemCliente *registro;
-    for (int i = 0; i < hash->tamanho; ++i) {
-        registro = hash->registro[i];
-        if (registro == NULL) printf("\n%d", i);
-        else {
-            while (registro != NULL) {
-                printf("\n%d - %d %s %f", i, registro->cliente->codigo, registro->cliente->nome,
-                       registro->cliente->saldo);
-                registro = registro->menor;
-            }
-        }
-    }
-}

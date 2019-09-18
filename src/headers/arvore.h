@@ -9,11 +9,13 @@
 #include "cliente.h"
 
 typedef struct {
-    ItemCliente **registro;
+    ItemCliente **raiz;
 } ArvoreClientes;
 
-void inserir(ArvoreClientes *arvore, ItemCliente *registro);
+ArvoreClientes *criarArvore();
 
-ArvoreClientes *preencherHash(FILE *arquivo);
+void inserir(ItemCliente **raiz, Cliente *cliente);
+
+ArvoreClientes *preencherArvore(FILE *arquivo);
 
 #endif //TPA_ARVORE_ARVORE_H
