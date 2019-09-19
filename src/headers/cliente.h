@@ -15,12 +15,13 @@ typedef struct structCliente {
 
 typedef struct structItemCliente {
     Cliente *cliente;
-    struct structItemCliente *maior, *menor;
+    int nivel;
+    struct structItemCliente *maior;
+    struct structItemCliente *menor;
 } ItemCliente;
-
 
 Cliente *criarCliente(char *codigo, char *nome, char *saldo);
 
-ItemCliente *criarRegistro(Cliente *cliente);
+ItemCliente *criarRegistro(Cliente *cliente, int nivel);
 
 #endif //TPA_HASH_CLIENTE_H
