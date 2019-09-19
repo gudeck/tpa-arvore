@@ -18,11 +18,12 @@ Cliente *criarCliente(char *codigo, char *nome, char *saldo) {
     return novoCliente;
 }
 
-ItemCliente *criarRegistro(Cliente *cliente) {
+ItemCliente *criarRegistro(Cliente *cliente, int nivel) {
 
     ItemCliente *novoRegistro = (ItemCliente *) calloc(1, sizeof(ItemCliente));
 
     novoRegistro->cliente = cliente;
+    novoRegistro->nivel = nivel;
     novoRegistro->maior = NULL;
     novoRegistro->menor = NULL;
     return novoRegistro;

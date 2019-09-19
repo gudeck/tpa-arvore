@@ -6,8 +6,22 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c
+headers/arvore.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
+string.h
+-
+stdlib.h
+-
+math.h
+-
+windef.h
+-
+
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 stdio.h
+-
+stdbool.h
 -
 cliente.h
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
@@ -15,14 +29,4 @@ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
 stdbool.h
 -
-
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c
-locale.h
--
-stdio.h
--
-headers/cliente.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
-headers/arvore.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 
