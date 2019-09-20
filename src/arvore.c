@@ -114,7 +114,6 @@ void posOrdem(ItemCliente *raiz) {
         printf("\t%d", raiz->cliente->codigo);
     }
 }
-
 void preOrdem(ItemCliente *raiz) {
     if (raiz != NULL) {
         printf("\t%d", raiz->cliente->codigo);
