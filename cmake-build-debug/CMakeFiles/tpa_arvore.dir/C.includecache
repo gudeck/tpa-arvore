@@ -6,27 +6,41 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c
-headers/arvore.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
-string.h
--
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreAberta.c
 stdlib.h
 -
-math.h
--
-windef.h
--
+headers/arvoreAberta.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
 
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 stdio.h
 -
+arvoreAberta.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+arvoreFechada.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+cliente.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
 stdbool.h
 -
 cliente.h
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
 
 C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
-stdbool.h
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/main.h
+
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c
+stdio.h
 -
+locale.h
+-
+headers/main.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/main.h
+headers/arvore.h
+C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
 

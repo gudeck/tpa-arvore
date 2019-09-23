@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
+  "C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreAberta.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj"
+  "C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreFechada.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj"
   "C:/Users/guzuc/CLionProjects/tpa-arvore/src/cliente.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/cliente.c.obj"
   "C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c" "C:/Users/guzuc/CLionProjects/tpa-arvore/cmake-build-debug/CMakeFiles/tpa_arvore.dir/src/main.c.obj"
   )

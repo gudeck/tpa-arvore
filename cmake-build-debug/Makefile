@@ -149,6 +149,60 @@ src/arvore.c.s:
 	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvore.c.s
 .PHONY : src/arvore.c.s
 
+src/arvoreAberta.obj: src/arvoreAberta.c.obj
+
+.PHONY : src/arvoreAberta.obj
+
+# target to build an object file
+src/arvoreAberta.c.obj:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj
+.PHONY : src/arvoreAberta.c.obj
+
+src/arvoreAberta.i: src/arvoreAberta.c.i
+
+.PHONY : src/arvoreAberta.i
+
+# target to preprocess a source file
+src/arvoreAberta.c.i:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.i
+.PHONY : src/arvoreAberta.c.i
+
+src/arvoreAberta.s: src/arvoreAberta.c.s
+
+.PHONY : src/arvoreAberta.s
+
+# target to generate assembly for a file
+src/arvoreAberta.c.s:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.s
+.PHONY : src/arvoreAberta.c.s
+
+src/arvoreFechada.obj: src/arvoreFechada.c.obj
+
+.PHONY : src/arvoreFechada.obj
+
+# target to build an object file
+src/arvoreFechada.c.obj:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj
+.PHONY : src/arvoreFechada.c.obj
+
+src/arvoreFechada.i: src/arvoreFechada.c.i
+
+.PHONY : src/arvoreFechada.i
+
+# target to preprocess a source file
+src/arvoreFechada.c.i:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.i
+.PHONY : src/arvoreFechada.c.i
+
+src/arvoreFechada.s: src/arvoreFechada.c.s
+
+.PHONY : src/arvoreFechada.s
+
+# target to generate assembly for a file
+src/arvoreFechada.c.s:
+	$(MAKE) -f CMakeFiles\tpa_arvore.dir\build.make CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.s
+.PHONY : src/arvoreFechada.c.s
+
 src/cliente.obj: src/cliente.c.obj
 
 .PHONY : src/cliente.obj
@@ -215,6 +269,12 @@ help:
 	@echo ... src/arvore.obj
 	@echo ... src/arvore.i
 	@echo ... src/arvore.s
+	@echo ... src/arvoreAberta.obj
+	@echo ... src/arvoreAberta.i
+	@echo ... src/arvoreAberta.s
+	@echo ... src/arvoreFechada.obj
+	@echo ... src/arvoreFechada.i
+	@echo ... src/arvoreFechada.s
 	@echo ... src/cliente.obj
 	@echo ... src/cliente.i
 	@echo ... src/cliente.s

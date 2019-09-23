@@ -77,10 +77,22 @@
 		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c">
 			<Option target="tpa_arvore"/>
 		</Unit>
+		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreAberta.c">
+			<Option target="tpa_arvore"/>
+		</Unit>
+		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreFechada.c">
+			<Option target="tpa_arvore"/>
+		</Unit>
 		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/cliente.c">
 			<Option target="tpa_arvore"/>
 		</Unit>
 		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h">
+			<Option target="tpa_arvore"/>
+		</Unit>
+		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h">
+			<Option target="tpa_arvore"/>
+		</Unit>
+		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h">
 			<Option target="tpa_arvore"/>
 		</Unit>
 		<Unit filename="C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h">

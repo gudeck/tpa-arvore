@@ -5,8 +5,6 @@
 #ifndef TPA_HASH_CLIENTE_H
 #define TPA_HASH_CLIENTE_H
 
-#include <stdbool.h>
-
 typedef struct structCliente {
     int codigo;
     char *nome;

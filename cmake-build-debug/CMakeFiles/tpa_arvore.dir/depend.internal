@@ -4,6 +4,16 @@
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvore.c
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreAberta.c
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/arvoreFechada.c
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
 CMakeFiles/tpa_arvore.dir/src/cliente.c.obj
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/cliente.c
@@ -11,5 +21,8 @@ CMakeFiles/tpa_arvore.dir/src/cliente.c.obj
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/main.h
 CMakeFiles/tpa_arvore.dir/src/main.c.obj
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+ C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/main.h
  C:/Users/guzuc/CLionProjects/tpa-arvore/src/main.c

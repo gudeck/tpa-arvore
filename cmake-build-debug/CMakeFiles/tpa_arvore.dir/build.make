@@ -82,9 +82,35 @@ CMakeFiles/tpa_arvore.dir/src/cliente.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpa_arvore.dir/src/cliente.c.s"
 	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\guzuc\CLionProjects\tpa-arvore\src\cliente.c -o CMakeFiles\tpa_arvore.dir\src\cliente.c.s
 
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj: CMakeFiles/tpa_arvore.dir/flags.make
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj: ../src/arvoreFechada.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\tpa_arvore.dir\src\arvoreFechada.c.obj   -c C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreFechada.c
+
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.i"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreFechada.c > CMakeFiles\tpa_arvore.dir\src\arvoreFechada.c.i
+
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.s"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreFechada.c -o CMakeFiles\tpa_arvore.dir\src\arvoreFechada.c.s
+
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj: CMakeFiles/tpa_arvore.dir/flags.make
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj: ../src/arvoreAberta.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\tpa_arvore.dir\src\arvoreAberta.c.obj   -c C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreAberta.c
+
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.i"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreAberta.c > CMakeFiles\tpa_arvore.dir\src\arvoreAberta.c.i
+
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.s"
+	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvoreAberta.c -o CMakeFiles\tpa_arvore.dir\src\arvoreAberta.c.s
+
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: CMakeFiles/tpa_arvore.dir/flags.make
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/arvore.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
 	C:\Users\guzuc\Desktop\dev_c_cpp\MiniGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\tpa_arvore.dir\src\arvore.c.obj   -c C:\Users\guzuc\CLionProjects\tpa-arvore\src\arvore.c
 
 CMakeFiles/tpa_arvore.dir/src/arvore.c.i: cmake_force
@@ -99,6 +125,8 @@ CMakeFiles/tpa_arvore.dir/src/arvore.c.s: cmake_force
 tpa_arvore_OBJECTS = \
 "CMakeFiles/tpa_arvore.dir/src/main.c.obj" \
 "CMakeFiles/tpa_arvore.dir/src/cliente.c.obj" \
+"CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj" \
+"CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj" \
 "CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
 
 # External object files for target tpa_arvore
@@ -106,12 +134,14 @@ tpa_arvore_EXTERNAL_OBJECTS =
 
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/src/main.c.obj
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/src/cliente.c.obj
+tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj
+tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/src/arvore.c.obj
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/build.make
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/linklibs.rsp
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/objects1.rsp
 tpa_arvore.exe: CMakeFiles/tpa_arvore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable tpa_arvore.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\guzuc\CLionProjects\tpa-arvore\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable tpa_arvore.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tpa_arvore.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

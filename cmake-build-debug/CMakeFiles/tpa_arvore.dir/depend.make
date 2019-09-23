@@ -3,13 +3,26 @@
 
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/arvore.c
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/headers/arvore.h
+CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/headers/arvoreAberta.h
+CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/headers/arvoreFechada.h
 CMakeFiles/tpa_arvore.dir/src/arvore.c.obj: ../src/headers/cliente.h
+
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj: ../src/arvoreAberta.c
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj: ../src/headers/arvoreAberta.h
+CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj: ../src/headers/cliente.h
+
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj: ../src/arvoreFechada.c
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj: ../src/headers/arvoreFechada.h
+CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj: ../src/headers/cliente.h
 
 CMakeFiles/tpa_arvore.dir/src/cliente.c.obj: ../src/cliente.c
 CMakeFiles/tpa_arvore.dir/src/cliente.c.obj: ../src/headers/cliente.h
 CMakeFiles/tpa_arvore.dir/src/cliente.c.obj: ../src/headers/main.h
 
 CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/headers/arvore.h
+CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/headers/arvoreAberta.h
+CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/headers/arvoreFechada.h
 CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/headers/cliente.h
+CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/headers/main.h
 CMakeFiles/tpa_arvore.dir/src/main.c.obj: ../src/main.c
 

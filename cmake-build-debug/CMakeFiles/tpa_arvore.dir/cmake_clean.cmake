@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tpa_arvore.dir/src/main.c.obj"
   "CMakeFiles/tpa_arvore.dir/src/cliente.c.obj"
+  "CMakeFiles/tpa_arvore.dir/src/arvoreFechada.c.obj"
+  "CMakeFiles/tpa_arvore.dir/src/arvoreAberta.c.obj"
   "CMakeFiles/tpa_arvore.dir/src/arvore.c.obj"
   "tpa_arvore.pdb"
   "tpa_arvore.exe"

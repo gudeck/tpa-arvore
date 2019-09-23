@@ -2,9 +2,9 @@
 // Created by 2017122760013 on 09/09/2019.
 //
 
-#include <locale.h>
 #include <stdio.h>
-#include "headers/cliente.h"
+#include <locale.h>
+#include "headers/main.h"
 #include "headers/arvore.h"
 
 int main(int argc, char *argv[]) {
@@ -14,13 +14,15 @@ int main(int argc, char *argv[]) {
     FILE *arquivo = fopen("../DadosBancoPulini.txt", "r");
 
     if (arquivo != NULL) {
-        ArvoreClientes *arvore = preencherArvore(arquivo);
+
+        ArvoreAberta *arvoreAberta = criarArvoreAberta();
+        ArvoreFechada *arvoreFechada = criarArvoreFechada();
+        preencherArvore(arquivo, arvoreAberta, arvoreFechada);
 
 //        ItemCliente *registro = buscarElemento(*(arvore->raiz), 6850);
-        emOrdem(*(arvore->raiz));
-        excluir(*(arvore->raiz), 12);
-        emOrdem(*(arvore->raiz));
-//        posOrdem(*(arvore->raiz));
+//        emOrdem(*(arvore->raiz));
+//        emOrdem(*(arvore->raiz));
+//        emOrdem(*(arvoreFechada->raiz));
 
         fclose(arquivo);
     }
