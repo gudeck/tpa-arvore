@@ -7,6 +7,7 @@
 
 #include <stdbool.h>
 #include "cliente.h"
+#include "arvoreAberta.h"
 
 typedef struct {
     int altura;
@@ -14,6 +15,8 @@ typedef struct {
 } ArvoreFechada;
 
 ArvoreFechada *criarArvoreFechada();
+
+ArvoreFechada *preencherArvoreFechada(FILE *arquivo);
 
 ItemCliente *buscarElemento(ItemCliente *raiz, int codigo);
 

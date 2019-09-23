@@ -9,8 +9,6 @@
 #include "arvoreAberta.h"
 #include "arvoreFechada.h"
 
-bool espelhoSimilar(ArvoreAberta *arvoreAberta, ArvoreFechada *arvoreFechada);
-
-void *preencherArvore(FILE *arquivo, ArvoreAberta *arvoreAberta, ArvoreFechada *arvoreFechada);
+bool espelhoSimilar(ItemCliente *raiz, ArvoreAberta *arvoreAberta, int indice);
 
 #endif //TPA_ARVORE_ARVORE_H

@@ -4,27 +4,22 @@
 
 #include <stdio.h>
 #include <locale.h>
-#include "headers/main.h"
 #include "headers/arvore.h"
 
 int main(int argc, char *argv[]) {
 
     setlocale(LC_ALL, NULL);
 
-    FILE *arquivo = fopen("../DadosBancoPulini.txt", "r");
+    FILE *arquivoAberto = fopen("../DadosBancoPulini10k.txt", "r");
+    FILE *arquivoFechado = fopen("../DadosBancoPulini50k.txt", "r");
 
-    if (arquivo != NULL) {
+    if (arquivoAberto) {
 
-        ArvoreAberta *arvoreAberta = criarArvoreAberta();
-        ArvoreFechada *arvoreFechada = criarArvoreFechada();
-        preencherArvore(arquivo, arvoreAberta, arvoreFechada);
+        ArvoreAberta *arvoreAberta = preencherArvoreAberta(arquivoAberto);
+        ArvoreFechada *arvoreFechada = preencherArvoreFechada(arquivoFechado);
 
-//        ItemCliente *registro = buscarElemento(*(arvore->raiz), 6850);
-//        emOrdem(*(arvore->raiz));
-//        emOrdem(*(arvore->raiz));
-//        emOrdem(*(arvoreFechada->raiz));
 
-        fclose(arquivo);
+        fclose(arquivoAberto);
     }
     return 0;
 }

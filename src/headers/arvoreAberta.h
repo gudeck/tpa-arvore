@@ -5,6 +5,7 @@
 #ifndef TPA_ARVORE_ARVOREABERTA_H
 #define TPA_ARVORE_ARVOREABERTA_H
 
+#include <stdio.h>
 #include "cliente.h"
 
 typedef struct {
@@ -13,6 +14,8 @@ typedef struct {
 } ArvoreAberta;
 
 ArvoreAberta *criarArvoreAberta();
+
+ArvoreAberta *preencherArvoreAberta(FILE *arquivo);
 
 void inserirAberto(ArvoreAberta *arvore, Cliente *cliente, int indice);
 
