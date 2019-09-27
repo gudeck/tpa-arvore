@@ -22,4 +22,6 @@ Cliente *criarCliente(char *codigo, char *nome, char *saldo);
 
 ItemCliente *criarRegistro(Cliente *cliente, int nivel);
 
+char *removerCaractere(char *string, char caractere);
+
 #endif //TPA_HASH_CLIENTE_H

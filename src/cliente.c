@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "headers/cliente.h"
-#include "headers/main.h"
 
 Cliente *criarCliente(char *codigo, char *nome, char *saldo) {
 
@@ -27,5 +26,16 @@ ItemCliente *criarRegistro(Cliente *cliente, int nivel) {
     novoRegistro->maior = NULL;
     novoRegistro->menor = NULL;
     return novoRegistro;
+}
+
+char *removerCaractere(char *string, char caractere) {
+    for (int i = 0; string[i] != '\0'; i++) {
+        if (string[i] == caractere) {
+            for (int j = i; string[j] != '\0'; ++j) {
+                string[j] = string[j + 1];
+            }
+        }
+    }
+    return string;
 }
 

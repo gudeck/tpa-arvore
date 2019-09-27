@@ -4,12 +4,10 @@
 
 #include <stdlib.h>
 #include <math.h>
-#include <stdio.h>
 #include <string.h>
 #include "headers/arvoreFechada.h"
 
 #define COMPLETA(x) (pow(2, (x) + 1) - 1)
-
 
 ArvoreFechada *criarArvoreFechada() {
     ArvoreFechada *novaArvore = (ArvoreFechada *) calloc(1, sizeof(ArvoreFechada));
@@ -18,19 +16,71 @@ ArvoreFechada *criarArvoreFechada() {
     return novaArvore;
 }
 
-ItemCliente *buscarElemento(ItemCliente *raiz, int codigo) {
+ArvoreFechada *preencherArvoreFechada(FILE *arquivo) {
+    rewind(arquivo);
+
+    ArvoreFechada *arvoreFechada = criarArvoreFechada();
+    Cliente *novoCliente;
+    char *codigo;
+    char *nome;
+    char *saldo;
+    char linha[99];
+
+    while (fgets(linha, 99, arquivo)) {
+        codigo = strtok(linha, "|");
+        nome = strtok(NULL, "|");
+        saldo = strtok(NULL, "\0");
+        novoCliente = criarCliente(codigo, nome, saldo);
+        inserirFechado(arvoreFechada->raiz, novoCliente, 0);
+    }
+    arvoreFechada->altura = calcularAltura(*(arvoreFechada->raiz));
+    return arvoreFechada;
+}
+
+ItemCliente *buscarArvore(ItemCliente *raiz, int codigo) {
     if (!raiz)
         return NULL;
     if (raiz->cliente->codigo == codigo)
         return raiz;
     else if (raiz->cliente->codigo < codigo)
-        return buscarElemento(raiz->maior, codigo);
+        return buscarArvore(raiz->maior, codigo);
     else
-        return buscarElemento(raiz->menor, codigo);
+        return buscarArvore(raiz->menor, codigo);
+}
+
+ItemCliente *excluirRegistro(ItemCliente *raiz, int codigo) {
+    if (raiz == NULL) return raiz;
+    if (codigo < raiz->cliente->codigo)
+        raiz->menor = excluirRegistro(raiz->menor, codigo);
+    else if (codigo > raiz->cliente->codigo)
+        raiz->maior = excluirRegistro(raiz->maior, codigo);
+    else {
+        ItemCliente *aux;
+        if (!raiz->menor) {
+            aux = raiz->maior;
+            free(raiz);
+            return aux;
+        } else if (!raiz->maior) {
+            aux = raiz->menor;
+            free(raiz);
+            return aux;
+        }
+        aux = menorValorDireita(raiz->maior);
+        raiz->cliente = aux->cliente;
+        raiz->maior = excluirRegistro(raiz->maior, aux->cliente->codigo);
+    }
+    return raiz;
+}
+
+ItemCliente *menorValorDireita(ItemCliente *raiz) {
+    ItemCliente *aux = raiz;
+    while (aux && aux->menor)
+        aux = aux->menor;
+    return aux;
 }
 
 bool arvoreCheia(ArvoreFechada *arvore) {
-    return (contarNodos(*(arvore->raiz)) == COMPLETA(arvore->altura)) && estritamenteBinaria(*(arvore->raiz));
+    return (contarNos(*(arvore->raiz)) == COMPLETA(arvore->altura)) && estritamenteBinaria(*(arvore->raiz));
 }
 
 bool estritamenteBinaria(ItemCliente *raiz) {
@@ -43,20 +93,20 @@ bool estritamenteBinaria(ItemCliente *raiz) {
     return true;
 }
 
-int contarAltura(ItemCliente *raiz) {
+int calcularAltura(ItemCliente *raiz) {
     if (!raiz)
         return -1;
     else {
-        int alturaEsquerda = contarAltura(raiz->menor);
-        int alturaDireita = contarAltura(raiz->maior);
+        int alturaEsquerda = calcularAltura(raiz->menor);
+        int alturaDireita = calcularAltura(raiz->maior);
         if (alturaEsquerda < alturaDireita) return alturaDireita + 1;
         else return alturaEsquerda + 1;
     }
 }
 
-int contarNodos(ItemCliente *raiz) {
+int contarNos(ItemCliente *raiz) {
     if (raiz)
-        return contarNodos(raiz->menor) + contarNodos(raiz->maior) + 1;
+        return contarNos(raiz->menor) + contarNos(raiz->maior) + 1;
     return 0;
 }
 
@@ -101,26 +151,4 @@ void preOrdem(ItemCliente *raiz) {
         preOrdem(raiz->menor);
         preOrdem(raiz->maior);
     }
-}
-
-
-ArvoreFechada *preencherArvoreFechada(FILE *arquivo) {
-    rewind(arquivo);
-
-    ArvoreFechada *arvoreFechada = criarArvoreFechada();
-    Cliente *novoCliente;
-    char *codigo;
-    char *nome;
-    char *saldo;
-    char linha[99];
-
-    while (fgets(linha, 99, arquivo)) {
-        codigo = strtok(linha, "|");
-        nome = strtok(NULL, "|");
-        saldo = strtok(NULL, "\0");
-        novoCliente = criarCliente(codigo, nome, saldo);
-        inserirFechado(arvoreFechada->raiz, novoCliente, 0);
-    }
-    arvoreFechada->altura = contarAltura(*(arvoreFechada->raiz));
-    return arvoreFechada;
 }

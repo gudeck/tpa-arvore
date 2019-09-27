@@ -2,36 +2,30 @@
 // Created by 2017122760013 on 09/09/2019.
 //
 
-#include <stdio.h>
 #include <locale.h>
-#include "headers/arvore.h"
+#include "headers/arvoreAberta.h"
+#include "headers/arvoreFechada.h"
+#include "headers/hash.h"
+#include "headers/menu.h"
 
 int main(int argc, char *argv[]) {
 
     setlocale(LC_ALL, NULL);
 
     FILE *arquivoAberto = fopen("../DadosBancoPulini10k.txt", "r");
-    FILE *arquivoFechado = fopen("../DadosBancoPulini50k.txt", "r");
+    FILE *arquivoFechado = fopen("../DadosBancoPulini10k.txt", "r");
+    FILE *arquivoHash = fopen("../DadosBancoPulini10k.txt", "r");
 
-    if (arquivoAberto) {
+    if (arquivoAberto && arquivoFechado && arquivoHash) {
 
         ArvoreAberta *arvoreAberta = preencherArvoreAberta(arquivoAberto);
         ArvoreFechada *arvoreFechada = preencherArvoreFechada(arquivoFechado);
+        Hash *hash = preencherHash(arquivoHash);
 
+        menu(&arvoreAberta, &arvoreFechada, &hash);
 
         fclose(arquivoAberto);
-    }
+    } else
+        printf("\nNão foi possível abrir os arquivos selecionados.");
     return 0;
 }
-
-char *removerCaractere(char *string, char caractere) {
-    for (int i = 0; string[i] != '\0'; i++) {
-        if (string[i] == caractere) {
-            for (int j = i; string[j] != '\0'; ++j) {
-                string[j] = string[j + 1];
-            }
-        }
-    }
-    return string;
-}
-

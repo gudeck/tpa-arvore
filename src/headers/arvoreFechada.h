@@ -5,9 +5,9 @@
 #ifndef TPA_ARVORE_ARVOREFECHADA_H
 #define TPA_ARVORE_ARVOREFECHADA_H
 
+#include <stdio.h>
 #include <stdbool.h>
 #include "cliente.h"
-#include "arvoreAberta.h"
 
 typedef struct {
     int altura;
@@ -18,15 +18,16 @@ ArvoreFechada *criarArvoreFechada();
 
 ArvoreFechada *preencherArvoreFechada(FILE *arquivo);
 
-ItemCliente *buscarElemento(ItemCliente *raiz, int codigo);
+ItemCliente *buscarArvore(ItemCliente *raiz, int codigo);
+
 
 bool arvoreCheia(ArvoreFechada *arvore);
 
 bool estritamenteBinaria(ItemCliente *raiz);
 
-int contarAltura(ItemCliente *raiz);
+int contarNos(ItemCliente *raiz);
 
-int contarNodos(ItemCliente *raiz);
+int calcularAltura(ItemCliente *raiz);
 
 void inserirFechado(ItemCliente **raiz, Cliente *cliente, int nivel);
 
@@ -37,5 +38,9 @@ void emOrdemInversa(ItemCliente *raiz);
 void posOrdem(ItemCliente *raiz);
 
 void preOrdem(ItemCliente *raiz);
+
+ItemCliente *excluirRegistro(ItemCliente *raiz, int codigo);
+
+ItemCliente *menorValorDireita(ItemCliente *raiz);
 
 #endif //TPA_ARVORE_ARVOREFECHADA_H

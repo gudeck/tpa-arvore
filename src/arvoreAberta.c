@@ -4,7 +4,6 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "headers/arvoreAberta.h"
 
 ArvoreAberta *criarArvoreAberta() {
@@ -34,10 +33,10 @@ ArvoreAberta *preencherArvoreAberta(FILE *arquivo) {
     return arvoreAberta;
 }
 
-void inserirAberto(ArvoreAberta *arvore, Cliente *cliente, int indice) {
+void inserirAberto(ArvoreAberta *arvore, Cliente *cliente, size_t indice) {
     if (indice > (arvore->tamanho - 1)) {
-        Cliente **novaRaiz = (Cliente **) calloc((size_t) (indice + 1), sizeof(Cliente *));
-        for (int i = 0; i < arvore->tamanho; ++i)
+        Cliente **novaRaiz = (Cliente **) calloc(indice + 1, sizeof(Cliente *));
+        for (size_t i = 0; i < arvore->tamanho; ++i)
             novaRaiz[i] = arvore->raiz[i];
         arvore->raiz = novaRaiz;
         arvore->tamanho = indice + 1;

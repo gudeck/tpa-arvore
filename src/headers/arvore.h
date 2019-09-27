@@ -5,10 +5,9 @@
 #ifndef TPA_ARVORE_ARVORE_H
 #define TPA_ARVORE_ARVORE_H
 
-#include <stdio.h>
+#include <stdbool.h>
 #include "arvoreAberta.h"
-#include "arvoreFechada.h"
 
-bool espelhoSimilar(ItemCliente *raiz, ArvoreAberta *arvoreAberta, int indice);
+bool espelhoSimilar(ArvoreAberta *arvoreAberta, ItemCliente *raiz, int indice);
 
 #endif //TPA_ARVORE_ARVORE_H

@@ -5,6 +5,4 @@
 #ifndef TPA_HASH_MAIN_H
 #define TPA_HASH_MAIN_H
 
-char *removerCaractere(char *string, char caractere);
-
 #endif //TPA_HASH_MAIN_H
