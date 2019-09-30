@@ -6,53 +6,45 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
-stdbool.h
--
-arvoreAberta.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
-
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
 stdio.h
 -
 cliente.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/cliente.h
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
 stdio.h
 -
 stdbool.h
 -
 cliente.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/cliente.h
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/cliente.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/cliente.h
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/hash.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/hash.h
 arvoreFechada.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/menu.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/menu.h
 stdio.h
 -
 arvoreAberta.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
 arvoreFechada.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
 hash.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/hash.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/hash.h
 
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/menu.c
-stdlib.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/main.c
+locale.h
 -
-time.h
--
-conio.h
--
-headers/menu.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/menu.h
+headers/arvoreAberta.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreAberta.h
+headers/arvoreFechada.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/arvoreFechada.h
 headers/hash.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/hash.h
-headers/arvore.h
-C:/Users/guzuc/CLionProjects/tpa-arvore/src/headers/arvore.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/hash.h
+headers/menu.h
+C:/Users/2017122760013/CLionProjects/tpa-arvore/src/headers/menu.h
 

@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     setlocale(LC_ALL, NULL);
 
     FILE *arquivoAberto = fopen("../DadosBancoPulini10k.txt", "r");
-    FILE *arquivoFechado = fopen("../DadosBancoPulini10k.txt", "r");
+    FILE *arquivoFechado = fopen("../DadosBancoPulini50k.txt", "r");
     FILE *arquivoHash = fopen("../DadosBancoPulini10k.txt", "r");
 
     if (arquivoAberto && arquivoFechado && arquivoHash) {
@@ -25,6 +25,9 @@ int main(int argc, char *argv[]) {
         menu(&arvoreAberta, &arvoreFechada, &hash);
 
         fclose(arquivoAberto);
+        fclose(arquivoFechado);
+        fclose(arquivoHash);
+
     } else
         printf("\nNão foi possível abrir os arquivos selecionados.");
     return 0;

@@ -9,7 +9,7 @@
 #include "headers/hash.h"
 #include "headers/arvore.h"
 
-#define CALCULATEMPO(final, inicial) (((double) (final) - (double) (inicial)) / (double) CLOCKS_PER_SEC)
+#define CALCULATEMPO(final, inicial) (((long double) (final) - (long double) (inicial)) / (long double) CLOCKS_PER_SEC)
 
 void menu(ArvoreAberta **arvoreAberta, ArvoreFechada **arvoreFechada, Hash **hash) {
 
@@ -38,7 +38,7 @@ void menu(ArvoreAberta **arvoreAberta, ArvoreFechada **arvoreFechada, Hash **has
             ItemCliente *registro;
             printf("\nInsira o codigo a ser buscado: ");
             scanf(" %d", &codigo);
-            registro = buscarArvore(*(*arvoreFechada)->raiz, opcao);
+            registro = buscarArvore(*(*arvoreFechada)->raiz, codigo);
             if (registro)
                 printf("\nO nivel do registro buscado e %d", registro->nivel);
             else
@@ -75,7 +75,7 @@ void menu(ArvoreAberta **arvoreAberta, ArvoreFechada **arvoreFechada, Hash **has
             ItemCliente *registro;
             printf("\nInsira o codigo a ser buscado: ");
             scanf(" %d", &codigo);
-            registro = buscarArvore(*(*arvoreFechada)->raiz, opcao);
+            registro = buscarArvore(*(*arvoreFechada)->raiz, codigo);
             if (registro)
                 printf("\nOs dados solicitados foram: %d %s %f", registro->cliente->codigo, registro->cliente->nome,
                        registro->cliente->saldo);
@@ -87,9 +87,9 @@ void menu(ArvoreAberta **arvoreAberta, ArvoreFechada **arvoreFechada, Hash **has
             ItemCliente *registro;
             printf("\nInsira o codigo a ser excluido: ");
             scanf(" %d", &codigo);
-            registro = buscarArvore(*(*arvoreFechada)->raiz, opcao);
+            registro = buscarArvore(*(*arvoreFechada)->raiz, codigo);
             if (registro) {
-                excluirRegistro(*(*arvoreFechada)->raiz, opcao);
+                excluirRegistro(*(*arvoreFechada)->raiz, codigo);
                 printf("\nRegistro excluido com sucesso!");
             } else
                 printf("\nRegistro nao encontrado.");
@@ -108,14 +108,18 @@ void menu(ArvoreAberta **arvoreAberta, ArvoreFechada **arvoreFechada, Hash **has
             printf("\nInsira o codigo a ser buscado: ");
             scanf(" %d", &codigo);
             inicialArvore = clock();
-            buscarArvore(*(*arvoreFechada)->raiz, opcao);
+            buscarArvore(*(*arvoreFechada)->raiz, codigo);
             finalArvore = clock();
             inicialHash = clock();
-            buscarHash(*hash, opcao);
+            buscarHash(*hash, codigo);
             finalHash = clock();
             printf("\nTempo gasto nas buscas"\
-            "\nArvore: %f"\
-            "\nHash: %f", CALCULATEMPO(finalArvore, inicialArvore), CALCULATEMPO(finalHash, inicialHash));
+            "\nArvore: %Lf"\
+            "\nHash: %Lf"\
+            "\nRazao: %Lf",
+                   CALCULATEMPO(finalArvore, inicialArvore),
+                   CALCULATEMPO(finalHash, inicialHash),
+                   (CALCULATEMPO(finalArvore, inicialArvore) / CALCULATEMPO(finalHash, inicialHash)));
             break;
         }
         case 0: {
